@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="总结几种排序算法实现">
+<meta name="description" content="跨域实现之iframe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js排序算法">
-<meta property="og:url" content="http://yoursite.com/2016/02/18/js排序算法/index.html">
+<meta property="og:title" content="跨域实现之iframe">
+<meta property="og:url" content="http://yoursite.com/2016/08/28/crossDomain-iframe/index.html">
 <meta property="og:site_name" content="Chensonghao的博客">
-<meta property="og:description" content="总结几种排序算法实现">
-<meta property="og:updated_time" content="2016-02-18T08:34:40.000Z">
+<meta property="og:description" content="跨域实现之iframe">
+<meta property="og:updated_time" content="2016-08-28T11:46:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js排序算法">
-<meta name="twitter:description" content="总结几种排序算法实现">
+<meta name="twitter:title" content="跨域实现之iframe">
+<meta name="twitter:description" content="跨域实现之iframe">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> js排序算法 | Chensonghao的博客 </title>
+  <title> 跨域实现之iframe | Chensonghao的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -214,7 +214,7 @@
             
             
               
-                js排序算法
+                跨域实现之iframe
               
             
           </h1>
@@ -226,8 +226,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-18T16:20:49+08:00" content="2016-02-18">
-              2016-02-18
+            <time itemprop="dateCreated" datetime="2016-08-28T19:18:05+08:00" content="2016-08-28">
+              2016-08-28
             </time>
           </span>
 
@@ -256,8 +256,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/18/js排序算法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/js排序算法/" itemprop="commentsCount"></span>
+                <a href="/2016/08/28/crossDomain-iframe/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/28/crossDomain-iframe/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -278,8 +278,14 @@
       
 
       
-        <h1 id="1-_u5FEB_u901F_u6392_u5E8F"><a href="#1-_u5FEB_u901F_u6392_u5E8F" class="headerlink" title="1.快速排序"></a>1.快速排序</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (!arr || arr.length === <span class="number">0</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> [];</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">var</span> refer = arr[<span class="number">0</span>],</span><br><span class="line">           left = [],</span><br><span class="line">           right = [];</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">           <span class="keyword">var</span> value=arr[i];</span><br><span class="line">           <span class="keyword">if</span> (value &lt; refer) &#123;</span><br><span class="line">               left.push(value);</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">               right.push(value);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> quickSort(left).concat(refer,quickSort(right));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">var</span> a = [<span class="number">2</span>,<span class="number">41</span>,<span class="number">58</span>,<span class="number">63</span>,<span class="number">5</span>,<span class="number">46</span>,<span class="number">5</span>,<span class="number">63</span>,<span class="number">22</span>,<span class="number">4</span>,<span class="number">43</span>];</span><br><span class="line">   <span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure>
-<h1 id="2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002"><a href="#2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002" class="headerlink" title="2.有空再写。。。"></a>2.有空再写。。。</h1>
+        <blockquote>
+<p>常见的几种跨域方法CORS、JSONP、iframe，这里主要讲一下iframe实现跨域获取数据的方法</p>
+</blockquote>
+<p>iframe实现跨域，主要用到的特性是iframe的window.name，这样，假设我在本地有一个<a href="http://localhost:2000/a.html" target="_blank" rel="external">http://localhost:2000/a.html</a> 页面需要获取 <a href="http://localhost:3000/b.html的一些数据" target="_blank" rel="external">http://localhost:3000/b.html的一些数据</a></p>
+<h5 id="u5728b_u9875_u9762_uFF0C_u6211_u4EEC_u628A_u9700_u8981_u4F20_u9012_u7684JSON_u5B57_u7B26_u4E32_u8D4B_u503C_u7ED9window-name"><a href="#u5728b_u9875_u9762_uFF0C_u6211_u4EEC_u628A_u9700_u8981_u4F20_u9012_u7684JSON_u5B57_u7B26_u4E32_u8D4B_u503C_u7ED9window-name" class="headerlink" title="在b页面，我们把需要传递的JSON字符串赋值给window.name"></a>在b页面，我们把需要传递的JSON字符串赋值给window.name</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.name = <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">  id:<span class="number">1</span>,</span><br><span class="line">  name:<span class="string">'dog'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h5 id="u5728a_u9875_u9762_uFF0C_u6211_u4EEC_u901A_u8FC7iframe_u83B7_u53D6"><a href="#u5728a_u9875_u9762_uFF0C_u6211_u4EEC_u901A_u8FC7iframe_u83B7_u53D6" class="headerlink" title="在a页面，我们通过iframe获取"></a>在a页面，我们通过iframe获取</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">crossDomain</span>(<span class="params">url, callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> iframe = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>);</span><br><span class="line">  iframe.src = url;</span><br><span class="line">  iframe.style.display = <span class="string">'none'</span>;</span><br><span class="line">  iframe.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      callback(iframe.contentWindow.name);</span><br><span class="line">      iframe.contentWindow.close();</span><br><span class="line">      <span class="built_in">document</span>.body.removeChild(iframe);</span><br><span class="line">      iframe.src = <span class="string">''</span>;</span><br><span class="line">      iframe = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(iframe);</span><br><span class="line">&#125;</span><br><span class="line">crossDomain(<span class="string">'http://localhost:3000/b.html'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(data));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>但是运行以上代码发现报错了，在跨域的情况下，是无法获取子窗口即iframe的contentWindow的属性的。但是iframe的window.name一旦定义是不会随着页面跳转被重置的，除非新页面重新定义了新的window.name值覆盖了前面定义的值，所以我们可以在b页面加载后就立马跳转回a页面同域名下的一个空页面，这里我新建了一个null.html，这样就可以获取到iframe.contentWindow.name了，完整代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">  封装的跨域获取数据的方法</span><br><span class="line">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">crossDomain</span>(<span class="params">url, callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> firstLoad =<span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">var</span> iframe = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>);</span><br><span class="line">  iframe.src = url;</span><br><span class="line">  iframe.style.display = <span class="string">'none'</span>;</span><br><span class="line">  iframe.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(firstLoad)&#123;</span><br><span class="line">      <span class="comment">//利用iframe中window.name一旦定义跳转页面不会重置，除非重新定义覆盖的特性，迅速跳转回同域名下的空页面，这样才能读取，不然还是存在跨域</span></span><br><span class="line">      <span class="comment">//因为重定向后会重新出发onload事件造成死循环，所以触发一次后就关闭并移除iframe</span></span><br><span class="line">      iframe.contentWindow.location = <span class="string">'/null.html'</span>;</span><br><span class="line">      firstLoad = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">      callback(iframe.contentWindow.name);</span><br><span class="line">      iframe.contentWindow.close();</span><br><span class="line">      <span class="built_in">document</span>.body.removeChild(iframe);</span><br><span class="line">      iframe.src = <span class="string">''</span>;</span><br><span class="line">      iframe = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(iframe);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//测试跨域获取数据</span></span><br><span class="line">crossDomain(<span class="string">'http://localhost:3000/index.html'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(data));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -296,16 +302,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/16/Canvas学习笔记-时钟/" rel="next" title="Canvas学习笔记-时钟">
-                <i class="fa fa-chevron-left"></i> Canvas学习笔记-时钟
+              <a href="/2016/08/07/es6分享1/" rel="next" title="ECMAScript 2015（ES6） 分享之一（let与const）">
+                <i class="fa fa-chevron-left"></i> ECMAScript 2015（ES6） 分享之一（let与const）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/24/ecmascript6_全规范（含node）/" rel="prev" title="EcmaScript6 全规范（含node）">
-                EcmaScript6 全规范（含node） <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/28/crossDomain-jsonp/" rel="prev" title="跨域实现之jsonp">
+                跨域实现之jsonp <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -332,8 +338,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/18/js排序算法/"
-           data-title="js排序算法" data-url="http://yoursite.com/2016/02/18/js排序算法/">
+      <div class="ds-thread" data-thread-key="2016/08/28/crossDomain-iframe/"
+           data-title="跨域实现之iframe" data-url="http://yoursite.com/2016/08/28/crossDomain-iframe/">
       </div>
     
   </div>
@@ -438,7 +444,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_u5FEB_u901F_u6392_u5E8F"><span class="nav-number">1.</span> <span class="nav-text">1.快速排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002"><span class="nav-number">2.</span> <span class="nav-text">2.有空再写。。。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#u5728b_u9875_u9762_uFF0C_u6211_u4EEC_u628A_u9700_u8981_u4F20_u9012_u7684JSON_u5B57_u7B26_u4E32_u8D4B_u503C_u7ED9window-name"><span class="nav-number">1.</span> <span class="nav-text">在b页面，我们把需要传递的JSON字符串赋值给window.name</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u5728a_u9875_u9762_uFF0C_u6211_u4EEC_u901A_u8FC7iframe_u83B7_u53D6"><span class="nav-number">2.</span> <span class="nav-text">在a页面，我们通过iframe获取</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

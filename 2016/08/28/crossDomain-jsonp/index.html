@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="总结几种排序算法实现">
+<meta name="description" content="跨域实现之jsonp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js排序算法">
-<meta property="og:url" content="http://yoursite.com/2016/02/18/js排序算法/index.html">
+<meta property="og:title" content="跨域实现之jsonp">
+<meta property="og:url" content="http://yoursite.com/2016/08/28/crossDomain-jsonp/index.html">
 <meta property="og:site_name" content="Chensonghao的博客">
-<meta property="og:description" content="总结几种排序算法实现">
-<meta property="og:updated_time" content="2016-02-18T08:34:40.000Z">
+<meta property="og:description" content="跨域实现之jsonp">
+<meta property="og:updated_time" content="2016-08-28T12:33:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js排序算法">
-<meta name="twitter:description" content="总结几种排序算法实现">
+<meta name="twitter:title" content="跨域实现之jsonp">
+<meta name="twitter:description" content="跨域实现之jsonp">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> js排序算法 | Chensonghao的博客 </title>
+  <title> 跨域实现之jsonp | Chensonghao的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -214,7 +214,7 @@
             
             
               
-                js排序算法
+                跨域实现之jsonp
               
             
           </h1>
@@ -226,8 +226,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-18T16:20:49+08:00" content="2016-02-18">
-              2016-02-18
+            <time itemprop="dateCreated" datetime="2016-08-28T19:55:05+08:00" content="2016-08-28">
+              2016-08-28
             </time>
           </span>
 
@@ -256,8 +256,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/18/js排序算法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/js排序算法/" itemprop="commentsCount"></span>
+                <a href="/2016/08/28/crossDomain-jsonp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/28/crossDomain-jsonp/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -278,8 +278,14 @@
       
 
       
-        <h1 id="1-_u5FEB_u901F_u6392_u5E8F"><a href="#1-_u5FEB_u901F_u6392_u5E8F" class="headerlink" title="1.快速排序"></a>1.快速排序</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (!arr || arr.length === <span class="number">0</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> [];</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">var</span> refer = arr[<span class="number">0</span>],</span><br><span class="line">           left = [],</span><br><span class="line">           right = [];</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">           <span class="keyword">var</span> value=arr[i];</span><br><span class="line">           <span class="keyword">if</span> (value &lt; refer) &#123;</span><br><span class="line">               left.push(value);</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">               right.push(value);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> quickSort(left).concat(refer,quickSort(right));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">var</span> a = [<span class="number">2</span>,<span class="number">41</span>,<span class="number">58</span>,<span class="number">63</span>,<span class="number">5</span>,<span class="number">46</span>,<span class="number">5</span>,<span class="number">63</span>,<span class="number">22</span>,<span class="number">4</span>,<span class="number">43</span>];</span><br><span class="line">   <span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure>
-<h1 id="2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002"><a href="#2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002" class="headerlink" title="2.有空再写。。。"></a>2.有空再写。。。</h1>
+        <blockquote>
+<p>前面有讲到使用iframe的window.name实现跨域，但是其交互还是相对复杂，用语单纯的获取JSON数据并不是那么合适的，并且现在iframe是不推荐使用的。所以相当一个阶段，使用jsonp进行跨域是一个很普遍是实现方式。</p>
+</blockquote>
+<p>我们知道script标签的src是没有同源策略限制的，并且获取的js代码是立即执行的，使用jsonp跨域就是应用了这两个特性。其实很简单，我们在全局作用域定义一个方法用语获取数据后的后续处理<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">JSONP_CALLBACK</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//--to do something</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(data));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后我们可以异步请求一个后台接口, 传入回调函数名’?callback=JSONP_CALLBACK’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">'http://test/testapi?callback=JSONP_CALLBACK'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>然后后台返回执行回调函数的js字符串’JSONP_CALLBACK(JSON.stringify({name:”test”}))’，这样就能在回调函数JSONP_CALLBACK中获取后台数据了。</p>
+<p>完整代码如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取数据后的回调函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">JSONP_CALLBACK</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//--to do something</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(data));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//动态添加script标签指向接口获取数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDataByJSONP</span>(<span class="params">url</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">  script.setAttribute(<span class="string">"type"</span>,<span class="string">"text/javascript"</span>);</span><br><span class="line">  script.src = url;         </span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(script);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//test</span></span><br><span class="line">getDataByJSONP(<span class="string">'http://test/testapi?callback=JSONP_CALLBACK'</span>);</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -296,17 +302,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/16/Canvas学习笔记-时钟/" rel="next" title="Canvas学习笔记-时钟">
-                <i class="fa fa-chevron-left"></i> Canvas学习笔记-时钟
+              <a href="/2016/08/28/crossDomain-iframe/" rel="next" title="跨域实现之iframe">
+                <i class="fa fa-chevron-left"></i> 跨域实现之iframe
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/24/ecmascript6_全规范（含node）/" rel="prev" title="EcmaScript6 全规范（含node）">
-                EcmaScript6 全规范（含node） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -332,8 +334,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/18/js排序算法/"
-           data-title="js排序算法" data-url="http://yoursite.com/2016/02/18/js排序算法/">
+      <div class="ds-thread" data-thread-key="2016/08/28/crossDomain-jsonp/"
+           data-title="跨域实现之jsonp" data-url="http://yoursite.com/2016/08/28/crossDomain-jsonp/">
       </div>
     
   </div>
@@ -438,7 +440,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_u5FEB_u901F_u6392_u5E8F"><span class="nav-number">1.</span> <span class="nav-text">1.快速排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002"><span class="nav-number">2.</span> <span class="nav-text">2.有空再写。。。</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
