@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="总结几种排序算法实现">
+<meta name="description" content="跨域实现之CORS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js排序算法">
-<meta property="og:url" content="http://yoursite.com/2016/02/18/js排序算法/index.html">
+<meta property="og:title" content="跨域实现之CORS">
+<meta property="og:url" content="http://yoursite.com/2016/09/04/crossDomain-CORS/index.html">
 <meta property="og:site_name" content="Chensonghao的博客">
-<meta property="og:description" content="总结几种排序算法实现">
-<meta property="og:updated_time" content="2016-02-18T08:34:40.000Z">
+<meta property="og:description" content="跨域实现之CORS">
+<meta property="og:updated_time" content="2016-09-04T12:23:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js排序算法">
-<meta name="twitter:description" content="总结几种排序算法实现">
+<meta name="twitter:title" content="跨域实现之CORS">
+<meta name="twitter:description" content="跨域实现之CORS">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> js排序算法 | Chensonghao的博客 </title>
+  <title> 跨域实现之CORS | Chensonghao的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -214,7 +214,7 @@
             
             
               
-                js排序算法
+                跨域实现之CORS
               
             
           </h1>
@@ -226,8 +226,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-18T16:20:49+08:00" content="2016-02-18">
-              2016-02-18
+            <time itemprop="dateCreated" datetime="2016-09-04T19:20:05+08:00" content="2016-09-04">
+              2016-09-04
             </time>
           </span>
 
@@ -256,8 +256,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/18/js排序算法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/js排序算法/" itemprop="commentsCount"></span>
+                <a href="/2016/09/04/crossDomain-CORS/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/04/crossDomain-CORS/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -278,8 +278,18 @@
       
 
       
-        <h1 id="1-_u5FEB_u901F_u6392_u5E8F"><a href="#1-_u5FEB_u901F_u6392_u5E8F" class="headerlink" title="1.快速排序"></a>1.快速排序</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (!arr || arr.length === <span class="number">0</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> [];</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">var</span> refer = arr[<span class="number">0</span>],</span><br><span class="line">           left = [],</span><br><span class="line">           right = [];</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">           <span class="keyword">var</span> value=arr[i];</span><br><span class="line">           <span class="keyword">if</span> (value &lt; refer) &#123;</span><br><span class="line">               left.push(value);</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">               right.push(value);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> quickSort(left).concat(refer,quickSort(right));</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">var</span> a = [<span class="number">2</span>,<span class="number">41</span>,<span class="number">58</span>,<span class="number">63</span>,<span class="number">5</span>,<span class="number">46</span>,<span class="number">5</span>,<span class="number">63</span>,<span class="number">22</span>,<span class="number">4</span>,<span class="number">43</span>];</span><br><span class="line">   <span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure>
-<h1 id="2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002"><a href="#2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002" class="headerlink" title="2.有空再写。。。"></a>2.有空再写。。。</h1>
+        <blockquote>
+<p>前面有介绍过使用iframe以及JSONP进行跨域，这里介绍另一种方法－CORS。相比于前两种，这种跨域方式无疑更加先进。跨域资源共享（CORS ）是一种网络浏览器的技术规范，它为Web服务器定义了一种方式，允许网页从不同的域访问其资源。而这种访问是被同源策略所禁止的。CORS系统定义了一种浏览器和服务器交互的方式来确定是否允许跨域请求。 它是一个妥协，有更大的灵活性，但比起简单地允许所有这些的要求来说更加安全。</p>
+</blockquote>
+<p>CORS与JSONP相比，无疑更为先进、方便和可靠。</p>
+<ol>
+<li>JSONP只能实现GET请求，而CORS支持所有类型的HTTP请求。</li>
+<li>使用CORS，开发者可以使用普通的XMLHttpRequest发起请求和获得数据，比起JSONP有更好的错误处理。</li>
+<li>JSONP主要被老的浏览器支持，它们往往不支持CORS，而绝大多数现代浏览器都已经支持了CORS。</li>
+</ol>
+<h5 id="CORS_u7684_u539F_u7406"><a href="#CORS_u7684_u539F_u7406" class="headerlink" title="CORS的原理"></a>CORS的原理</h5><p>CORS实现跨域的原理是前端在发起跨域请求前先发送一个options请求进行跨域预检，检查服务端对于跨域请求的配置。服务器端对于CORS的支持，主要就是通过设置Access-Control-Allow-Origin来进行的，可以设置允许的跨域请求方式－－GET,POST,PUT等，也可以设置允许进行跨域请求来源的域名。这样一旦我们前面发送的options请求通过了服务端的配置规则，那么它会告诉浏览器我们的这次跨域请求是被允许的，那么浏览器就不会进行拦截。</p>
+<h5 id="u4E0B_u9762_u6211_u4EEC_u6765_u521B_u5EFA_u4E00_u4E2A_u8DE8_u57DF_u8BF7_u6C42_u7684_u5BF9_u8C61"><a href="#u4E0B_u9762_u6211_u4EEC_u6765_u521B_u5EFA_u4E00_u4E2A_u8DE8_u57DF_u8BF7_u6C42_u7684_u5BF9_u8C61" class="headerlink" title="下面我们来创建一个跨域请求的对象"></a>下面我们来创建一个跨域请求的对象</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCORSRequest</span>(<span class="params">method,url</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    <span class="keyword">if</span>(<span class="string">'withCredentials'</span> <span class="keyword">in</span> xhr)&#123;</span><br><span class="line">        xhr.withCredentials = <span class="literal">true</span>;</span><br><span class="line">        xhr.open(method,url,<span class="literal">true</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">typeof</span> XDomainRequest !== <span class="string">'undefined'</span>)&#123;</span><br><span class="line">        <span class="comment">//XDomainRequest是IE创建跨域请求的方式</span></span><br><span class="line">        xhr = <span class="keyword">new</span> XDomainRequest();</span><br><span class="line">        xhr.open(method,url);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        xhr = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> xhr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> xhr = createCORSRequest(<span class="string">'GET'</span>,<span class="string">'http://test/test'</span>);</span><br><span class="line"><span class="keyword">if</span>(!xhr)&#123;</span><br><span class="line">    alert(<span class="string">'Not support CORS!'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> res = xhr.responseText;</span><br><span class="line">        <span class="comment">//--todo</span></span><br><span class="line">    &#125;;</span><br><span class="line">    xhr.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//--todo</span></span><br><span class="line">    &#125;;</span><br><span class="line">    xhr.send();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -296,17 +306,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/16/Canvas学习笔记-时钟/" rel="next" title="Canvas学习笔记-时钟">
-                <i class="fa fa-chevron-left"></i> Canvas学习笔记-时钟
+              <a href="/2016/08/28/crossDomain-jsonp/" rel="next" title="跨域实现之jsonp">
+                <i class="fa fa-chevron-left"></i> 跨域实现之jsonp
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/24/ecmascript6_全规范（含node）/" rel="prev" title="EcmaScript6 全规范（含node）">
-                EcmaScript6 全规范（含node） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -332,8 +338,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/18/js排序算法/"
-           data-title="js排序算法" data-url="http://yoursite.com/2016/02/18/js排序算法/">
+      <div class="ds-thread" data-thread-key="2016/09/04/crossDomain-CORS/"
+           data-title="跨域实现之CORS" data-url="http://yoursite.com/2016/09/04/crossDomain-CORS/">
       </div>
     
   </div>
@@ -438,7 +444,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-_u5FEB_u901F_u6392_u5E8F"><span class="nav-number">1.</span> <span class="nav-text">1.快速排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-_u6709_u7A7A_u518D_u5199_u3002_u3002_u3002"><span class="nav-number">2.</span> <span class="nav-text">2.有空再写。。。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#CORS_u7684_u539F_u7406"><span class="nav-number">1.</span> <span class="nav-text">CORS的原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u4E0B_u9762_u6211_u4EEC_u6765_u521B_u5EFA_u4E00_u4E2A_u8DE8_u57DF_u8BF7_u6C42_u7684_u5BF9_u8C61"><span class="nav-number">2.</span> <span class="nav-text">下面我们来创建一个跨域请求的对象</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
